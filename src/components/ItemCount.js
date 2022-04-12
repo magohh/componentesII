@@ -1,6 +1,5 @@
 
-import {useState} from 'react';
-import { useEffect } from 'react';
+import {useState,useEffect} from 'react';
 
 const ItemCount = ({stock=0,initial=1,onAdd}) =>{
 
@@ -8,6 +7,7 @@ const ItemCount = ({stock=0,initial=1,onAdd}) =>{
         useEffect(() => {
             setnumberProducts(initial);
         },[]);
+
         const addProduct = () =>{
             if (numberProducts<stock){
                 setnumberProducts(numberProducts + 1)
@@ -19,11 +19,7 @@ const ItemCount = ({stock=0,initial=1,onAdd}) =>{
                 setnumberProducts(numberProducts - 1)
             }
         }
-        
-        const onAdd = (numberProducts) =>{
-            alert("Agregaste "+ numberProducts)
-        }
-        
+
     return (
         <>
         <div>
